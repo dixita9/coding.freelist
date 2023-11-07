@@ -2,16 +2,16 @@
 
 freeList::freeList( long int*inRAM, int size ) {
   head = inRAM
-  size = size - 2
+  head[0] = size - 2
 }
 
 long int*
 freeList::reserve_space( int reserve_size ) {
   long int* loc = NULL;
-  int old_size = size
+  int old_size = head[0]
   head[0] = reserve_size
   head[1] = 123456 
-  loc = head + 2
+   loc = head + 2
   head = head + reserve_size + 2
   head[0] = old size - reserve_size - 2
 
