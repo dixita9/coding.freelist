@@ -6,8 +6,11 @@ freeList::freeList( long int*inRAM, int size ) {
 }
 
 long int*
-freeList::reserve_space( int size ) {
+freeList::reserve_space( int reserve_size ) {
   long int* loc = NULL;
+  int old_size = size
+  head[0] = reserve_size
+  head[1] = 123456  
   
   return loc;
 }
