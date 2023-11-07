@@ -1,12 +1,14 @@
 #include "freeList.h"
 
 freeList::freeList( long int*inRAM, int size ) {
+  head = inRAM
+  size = size - 2
 }
 
 long int*
 freeList::reserve_space( int size ) {
   long int* loc = NULL;
-
+  
   return loc;
 }
 
