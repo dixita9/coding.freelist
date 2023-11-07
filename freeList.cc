@@ -10,8 +10,11 @@ freeList::reserve_space( int reserve_size ) {
   long int* loc = NULL;
   int old_size = size
   head[0] = reserve_size
-  head[1] = 123456  
-  
+  head[1] = 123456 
+  loc = head + 2
+  head = head + reserve_size + 2
+  head[0] = old size - reserve_size - 2
+
   return loc;
 }
 
