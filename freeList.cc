@@ -27,9 +27,8 @@ head[1] = prev
 
 void
 freeList::coalesce_forward() {
-bool can_coalesce = false
+bool can_coalesce = true
 long int* traveling_point = head
-
 
 while (can_coalesce = true){
   if(travel_point[1] != NULL) && (travel_point[1] == traveling_point[0] + 2 + traveling_point) {
