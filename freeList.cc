@@ -27,20 +27,21 @@ head[1] = prev;
 
 void
 freeList::coalesce_forward() {
-bool can_coalesce = true;
-long int* traveling_point = head;
+bool can_coalesce = true; // can_coalesce variable set to true
+long int* traveling_point = head; //new pointer pointing to head
 
 while (can_coalesce = true){
-  if(travel_point[1] != NULL) && (travel_point[1] == traveling_point[0] + 2 + traveling_point) {
+  if(traveling_point[1] != NULL) && (traveling_point[1] == traveling_point[0] + 2 + traveling_point) {//condition to check if 
+  the free list continues and that traveling_point[1] is pointing to the next free list)
 
-  long int* nextOne = traveling_point[1];
+  long int* nextOne = traveling_point[1];// a new pointer at traveling_point[1]
   traveling_point[1]  = nextOne[1];
-  travelling_point[0] = traveling_point[0] + 2 + nextOne[0];
+  travelling_point[0] = traveling_point[0] + 2 + nextOne[0]; //traveling_point[0] updated with thesize of coalsced free list. 
   
 }
   else{
-  can_coalesce = false;
-  traveling_point = traveling_point[1];
+  can_coalesce = false; //set can_coalse to false is above conditions are not met
+  traveling_point = traveling_point[1]; 
   }
 
 
