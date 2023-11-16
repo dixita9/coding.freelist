@@ -25,6 +25,7 @@ int main() {
   me.free_space( addr3 );
   me.print();
   me.coalesce_forward();
+  printf("Aftercoalesching\n");
   me.print();
   me.free_space( addr1 );
   me.print();
