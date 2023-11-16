@@ -20,7 +20,12 @@ int main() {
   me.print();
   long int* addr2 = me.reserve_space(200);
   me.print();
-
+  long int* addr3 = me.reserve_space(200);
+  me.print();
+  me.free_space( addr3 );
+  me.print();
+  me.coalesce_forward();
+  me.print();
   me.free_space( addr1 );
   me.print();
   me.coalesce_forward();
@@ -36,3 +41,4 @@ int main() {
   delete RAM;
   return 0;
 }
+
